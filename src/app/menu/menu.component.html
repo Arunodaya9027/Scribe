@@ -200,24 +200,21 @@
 
 <div class="container">
   <ul class="list-group">
-    <li
-      class="list-group-item"
-      *ngFor="let person of people"
-      [ngSwitch]="person.country"
-    >
-      <div *ngSwitchCase="'IN'" class="text-primary">
-        {{ person.name }} - {{ person.country }}
-      </div>
-      <div *ngSwitchCase="'US'" class="text-danges">
-        {{ person.name }} - {{ person.country }}
-      </div>
-      <div *ngSwitchCase="'UK'" class="text-success">
-        {{ person.name }} - {{ person.country }}
-      </div>
-      <div *ngSwitchCase="'FR'" class="text-warning">
-        {{ person.name }} - {{ person.country }}
-      </div>
-      <div *ngSwitchDefault class="text-dark">
+    <li class="list-group-item" *ngFor="let person of people">
+      <div
+        [ngClass]="{
+          'text-success': person.country === 'IN',
+          'text-danger': person.country === 'US',
+          'text-warning': person.country === 'UK',
+          'text-info': person.country === 'GR',
+          'text-primary': person.country === 'DE'
+        }"
+        [ngStyle]="{
+          'font-size': getTextSize(person),
+          'text-decoration': 'underline'
+        }"
+        [style.font-size.px]="36"
+      >
         {{ person.name }} - {{ person.country }}
       </div>
     </li>

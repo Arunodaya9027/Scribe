@@ -68,6 +68,13 @@ export class MenuComponent implements OnInit {
 
   constructor() {}
 
+  getTextSize(person: any) {
+    if (person.country == 'IN') return '50px';
+    else if (person.country == 'US') return '40px';
+    else if (person.country == 'UK') return '30px';
+    else return '20px';
+  }
+
   sayHello() {
     alert('Hello');
   }
