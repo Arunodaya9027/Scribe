@@ -51,3 +51,86 @@
     Submit
   </button>
 </div>
+
+<br />
+<br />
+<br />
+<br />
+<div class="container">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Your Name Here .."
+    [(ngModel)]="name"
+  />
+
+  <h1>{{ name }}</h1>
+</div>
+
+<br />
+<br />
+<br />
+<div class="container">
+  <div class="toolbar">
+    <input
+      type="number"
+      class="form-control"
+      placeholder="First Number .."
+      [(ngModel)]="num1"
+    />
+    <input
+      type="number"
+      class="form-control"
+      placeholder="Second Number .."
+      [(ngModel)]="num2"
+    />
+  </div>
+  <div class="toolbar">
+    <input
+      type="number"
+      class="form-control"
+      placeholder="Sum.."
+      [(ngModel)]="sum1"
+    />
+    <button type="button" class="btn btn-secondary" (click)="clear()">
+      Clear
+    </button>
+    <button type="button" class="btn btn-success" (click)="add()">Add</button>
+  </div>
+</div>
+
+<br />
+<div class="container">
+  <label for="number"> This form does not require any add button </label>
+</div>
+<br />
+
+<div class="container">
+  <div class="toolbar">
+    <input
+      type="number"
+      class="form-control"
+      placeholder="First Number .."
+      [(ngModel)]="num3"
+      (input)="add2()"
+    />
+    <input
+      type="number"
+      class="form-control"
+      placeholder="Second Number .."
+      [(ngModel)]="num4"
+      (input)="add2()"
+    />
+  </div>
+  <div class="toolbar">
+    <input
+      type="number"
+      class="form-control"
+      placeholder="sum"
+      [(ngModel)]="sum2"
+    />
+    <button type="button" class="btn btn-secondary" (click)="clear2()">
+      Clear
+    </button>
+  </div>
+</div>

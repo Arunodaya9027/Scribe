@@ -6,11 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent implements OnInit {
+  name: String = '';
+
   firstName: String = 'Master';
   lastName: String = 'Yoda';
-
-  num1: number = 10;
-  num2: number = 20;
 
   trainingName: String = 'Angular';
   trainingDuration: number = 10;
@@ -21,6 +20,14 @@ export class MenuComponent implements OnInit {
 
   disableMyButton: boolean = false;
   placeholder: String = 'Enter your name';
+
+  num1: number = 10;
+  num2: number = 20;
+  num3: number = 0;
+  num4: number = 0;
+
+  sum1: number = 30;
+  sum2: number = 0;
 
   constructor() {}
 
@@ -36,6 +43,26 @@ export class MenuComponent implements OnInit {
     if (this.placeholder != 'Enter your name')
       this.placeholder = 'Enter your name';
     else this.placeholder = this.firstName;
+  }
+
+  clear() {
+    this.num1 = 0;
+    this.num2 = 0;
+    this.sum1 = 0;
+  }
+
+  add() {
+    this.sum1 = this.num1 + this.num2;
+  }
+
+  clear2() {
+    this.num3 = 0;
+    this.num4 = 0;
+    this.sum2 = 0;
+  }
+
+  add2() {
+    this.sum2 = this.num4 + this.num3;
   }
 
   ngOnInit() {}
