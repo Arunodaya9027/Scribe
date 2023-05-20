@@ -19,7 +19,35 @@
 
   <a role="button" class="btn btn-primary" [href]="google"> Go to Google </a>
 
-  <button type="button" class="btn btn-success" [disabled]="disableMyButton">
+  <button
+    type="button"
+    class="btn btn-success"
+    [disabled]="disableMyButton"
+    (click)="sayHello()"
+  >
     Click Me
+  </button>
+
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Your Name Here .."
+    (change)="log($event)"
+  />
+</div>
+
+<div class="container">
+  <br />
+  <br />
+  <label for="name"> First Name </label>
+  <input
+    type="text"
+    class="form-control"
+    required
+    name="name"
+    [value]="placeholder"
+  />
+  <button type="button" class="btn btn-success" (click)="change()">
+    Submit
   </button>
 </div>
