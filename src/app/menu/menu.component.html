@@ -17,12 +17,14 @@
 <div class="container">
   <img [src]="logo" />
 
-  <a role="button" class="btn btn-primary" [href]="google"> Go to Google </a>
+  <a role="button" class="btn btn-primary" [href]="google" *ngIf="true">
+    Go to Google
+  </a>
 
   <button
     type="button"
     class="btn btn-success"
-    [disabled]="disableMyButton"
+    [disabled]="button"
     (click)="sayHello()"
   >
     Click Me
@@ -133,4 +135,56 @@
       Clear
     </button>
   </div>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="container">
+  <a
+    role="button"
+    class="btn btn-primary"
+    [href]="google"
+    *ngIf="showGoogleButton"
+  >
+    Go to Google
+  </a>
+
+  <button
+    type="button"
+    class="btn btn-success"
+    [disabled]="button"
+    (click)="toogleGoogleButton()"
+  >
+    Toogle Google Button
+  </button>
+</div>
+
+<div class="container">
+  <a
+    role="button"
+    class="btn btn-primary"
+    [href]="google"
+    *ngIf="shouldDisplayGoogleButton()"
+  >
+    Go to Google
+  </a>
+
+  <button
+    type="button"
+    class="btn btn-success"
+    [disabled]="button"
+    (click)="toogleGoogleButton()"
+  >
+    Toogle Google Button
+  </button>
+
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Your Name Here .."
+    [(ngModel)]="codeName"
+  />
 </div>

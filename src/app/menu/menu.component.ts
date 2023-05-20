@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit {
   logo: String =
     'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==';
 
-  disableMyButton: boolean = false;
+  button: boolean = false;
   placeholder: String = 'Enter your name';
 
   num1: number = 10;
@@ -28,6 +28,10 @@ export class MenuComponent implements OnInit {
 
   sum1: number = 30;
   sum2: number = 0;
+
+  showGoogleButton: Boolean = false;
+
+  codeName: String = 'Master Yoda';
 
   constructor() {}
 
@@ -63,6 +67,15 @@ export class MenuComponent implements OnInit {
 
   add2() {
     this.sum2 = this.num4 + this.num3;
+  }
+
+  toogleGoogleButton() {
+    this.showGoogleButton = !this.showGoogleButton;
+  }
+
+  shouldDisplayGoogleButton() {
+    if (this.codeName == 'Master Yoda') return true;
+    else return false;
   }
 
   ngOnInit() {}
