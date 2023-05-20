@@ -11,16 +11,7 @@ export class PersonComponent implements OnInit {
 
   constructor() {}
 
-  getTextSize(person: any) {
-    if (person.country == 'IN') return '50';
-    else if (person.country == 'US') return '40';
-    else if (person.country == 'UK') return '30';
-    else return '20px';
-  }
-
-  ngOnInit() {
-    console.log(this.person);
-  }
+  ngOnInit() {}
 
   onClick() {
     this.personClicked.emit();
