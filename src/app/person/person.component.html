@@ -1,0 +1,12 @@
+<li class="list-group-item">
+  <div
+    [ngClass]="{
+      'text-success': person.country === 'IN',
+      'text-danger': person.country === 'US',
+      'text-warning': person.country === 'UK'
+    }"
+    [style.font-size.px]="getTextSize(person)"
+  >
+    {{ person.name }} - {{ person.country }}
+  </div>
+</li>
