@@ -33,20 +33,40 @@ export class MenuComponent implements OnInit {
 
   codeName: String = 'Master Yoda';
 
-  fruits: String[] = [];
+  people: any[] = [
+    {
+      name: 'Master Yoda',
+      age: 900,
+      country: 'IN',
+    },
+    {
+      name: 'Master Windu',
+      age: 90,
+      country: 'US',
+    },
+    {
+      name: 'Master Kenobi',
+      age: 50,
+      country: 'UK',
+    },
+    {
+      name: 'Master Skywalker',
+      age: 30,
+      country: 'FR',
+    },
+    {
+      name: 'Sherlock Palpatine',
+      age: 70,
+      country: 'DE',
+    },
+    {
+      name: 'Last Jedi',
+      age: 30,
+      country: 'GR',
+    },
+  ];
 
-  constructor() {
-    this.fruits.push('Apple');
-    this.fruits.push('Banana');
-    this.fruits.push('Orange');
-    this.fruits.push('Kiwi');
-    this.fruits.push('Pineapple');
-    this.fruits.push('Mango');
-    this.fruits.push('Peach');
-    this.fruits.push('Pear');
-    this.fruits.push('Strawberry');
-    this.fruits.push('Watermelon');
-  }
+  constructor() {}
 
   sayHello() {
     alert('Hello');
