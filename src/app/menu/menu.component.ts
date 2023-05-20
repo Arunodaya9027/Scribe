@@ -112,4 +112,7 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit() {}
+  onPersonClicked() {
+    console.log('Person was clicked');
+  }
 }
