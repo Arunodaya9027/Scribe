@@ -33,7 +33,20 @@ export class MenuComponent implements OnInit {
 
   codeName: String = 'Master Yoda';
 
-  constructor() {}
+  fruits: String[] = [];
+
+  constructor() {
+    this.fruits.push('Apple');
+    this.fruits.push('Banana');
+    this.fruits.push('Orange');
+    this.fruits.push('Kiwi');
+    this.fruits.push('Pineapple');
+    this.fruits.push('Mango');
+    this.fruits.push('Peach');
+    this.fruits.push('Pear');
+    this.fruits.push('Strawberry');
+    this.fruits.push('Watermelon');
+  }
 
   sayHello() {
     alert('Hello');
