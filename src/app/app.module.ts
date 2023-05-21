@@ -4,11 +4,10 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here (for two
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
-import { PersonComponent } from './person/person.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, PersonComponent],
+  declarations: [AppComponent, SignupComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
